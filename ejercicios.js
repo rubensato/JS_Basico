@@ -342,7 +342,9 @@ Listado de ejercicios:
             console.log('4.b) La edad ' + Age + ' años corresponde a: Anciano');
         }
     
-    
+ 
+
+
 /*
 >>>>>>>>>>>>>>>>>>>>>>  EJERCICIO 5  <<<<<<<<<<<<<<<<<<<<<<<<<
 5) For
@@ -352,19 +354,33 @@ Listado de ejercicios:
 
     var animals = ["pigs", "goats", "sheep", "cows", "chickens"];
     
-    console.log('los elementos del array son: ' + animals);
+    console.log('5.a) los elementos del array son: ' + animals);
     
-    //Para poder ver estos alertas, hay que abrir la pagina index.html
-    //y en la vista consola se observaran las salidas de consola 
     for (var i = 0; i < 5; i++) {
-        var mensaje = 'El animal en el orden ' + i + ' es: ' + animals[i];
+        var mensaje = '5.a) El animal en el orden ' + i + ' es: ' + animals[i];
         window.alert(mensaje);
     }
+
+
 
 /*  b) Al array anterior convertir la primera letra de cada palabra en mayúscula 
     y mostrar una alerta por cada palabra modificada.*/
 
-       
+    var animals = ["pigs", "goats", "sheep", "cows", "chickens"];
+    
+    console.log('5.b) los elementos del array son: ' + animals);
+    
+    for (var i = 0; i < 5; i++) {
+        
+        //Modifico cada parabra, de manera de asegurarme que la primer letra se
+        //en mayuscula
+        var palabra = animals[i].substring(0,1).toUpperCase() + 
+        animals[i].substring(1);
+        
+        var mensaje = '5.b) El animal en el orden ' + i + ' es: ' + palabra;
+        window.alert(mensaje);
+    }
+  
 
 
 /*    c) Crear una variable llamada “sentence” que tenga un string vacío, luego 
@@ -372,13 +388,36 @@ Listado de ejercicios:
     palabra dentro de la variable sentence. Al final mostrar una única alerta 
     con la cadena completa.*/
 
+    var sentence = "";
+    
+    var animals = ["pigs", "goats", "sheep", "cows", "chickens"];
+    
+    console.log('5.c) los elementos del array son: ' + animals);
+    
+    for (var i = 0; i < 5; i++) {
+        sentence += animals[i];
+    }
+    
+    var mensaje = '5.c) La palabra sentence resultante es: ' + sentence;
+
+    window.alert(mensaje);
+
+
+
 /*    d) Crear una array vacío y con un bucle for de 10 repeticiones llenar el 
     array con el número de la repetición, es decir que al final de la ejecución 
     del bucle for deberia haber 10 elementos dentro del array, desde el número 0 
     hasta al numero 9. Mostrar por la consola del navegador el al array final 
     (utilizar console.log).*/
     
+    var numeros = [];
+        
+    for (var i = 0; i < 10; i++) {
+        numeros[i] = i;
+    }
 
+    console.log('5.d) el contenido del array numeros es: ' + numeros);
+    
 
 
 /*
