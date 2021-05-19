@@ -13,8 +13,32 @@ Por favor resolverlos en el orden planteado y hacer un commit por cada
 ejercicio resuelto.
 Agregar el enunciado de cada ejercicio como comentario en la solución del mismo.
 
+/*----------------------------------------------------
+
 /*****************************************************
-/*****************************************************/
+******************************************************
+*************   A T E N C I O N ! ! !  ***************
+******************************************************
+******************************************************
+***                                                ***
+***     Para observar los resultados, abrir la     ***
+***     pagina index.html, y abrir la vista de     ***     
+***     consola en el navegador (en Chrome, ir     ***
+***     a "inspeccionar" y abrir la vista de       ***
+***     consola).                                  ***
+***                                                ***
+***     La pagina index.html ejecuta el            ***
+***     archivo ejercicios.js en su apertura.      ***
+***                                                ***
+***     En la pagina index.html, tambien se        ***
+***     observarán los cuadros de alerta de        ***
+***     los ejercicios que lo propongan.           ***
+***                                                ***
+******************************************************
+******************************************************
+**************   A T E N C I O N ! ! !  **************
+******************************************************
+******************************************************
 
 /*----------------------------------------------------
 Listado de ejercicios:
@@ -163,7 +187,7 @@ Listado de ejercicios:
     "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
     "Diciembre"] mostrar por consola los meses 5 y 11 (utilizar console.log)*/
 
-    let arrayMeses1 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
+    var arrayMeses1 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
     "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
     "Diciembre"];
     
@@ -174,7 +198,7 @@ Listado de ejercicios:
 /*  b) Ordenar el array de meses alfabéticamente y mostrarlo por consola 
     (utilizar sort).*/
 
-    let arrayMeses2 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
+    var arrayMeses2 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
     "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
     "Diciembre"];
     
@@ -187,7 +211,7 @@ Listado de ejercicios:
 /*  c) Agregar un elemento al principio y al final del array (utilizar unshift 
     y push).*/
 
-    let arrayMeses3 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
+    var arrayMeses3 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
     "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
     "Diciembre"];
     
@@ -204,7 +228,7 @@ Listado de ejercicios:
 /*  d) Quitar un elemento del principio y del final del array (utilizar shift 
     y pop).*/
 
-    let arrayMeses4 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
+    var arrayMeses4 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
     "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
     "Diciembre"];
     
@@ -220,7 +244,7 @@ Listado de ejercicios:
 
 /*  e) Invertir el orden del array (utilizar reverse)*/
 
-    let arrayMeses5 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
+    var arrayMeses5 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
     "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
     "Diciembre"];
 
@@ -233,7 +257,7 @@ Listado de ejercicios:
 /*  f) Unir todos los elementos del array en un único string donde cada mes este 
     separado por un guión - (utilizar join).*/
 
-    let arrayMeses6 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
+    var arrayMeses6 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
     "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
     "Diciembre"];
 
@@ -249,11 +273,11 @@ Listado de ejercicios:
 /*  g) Crear una copia del array de meses que contenga desde Mayo hasta 
     Noviembre (utilizar slice).*/
 
-    let arrayMeses7 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
+    var arrayMeses7 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
     "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
     "Diciembre"];
 
-    console.log('3.f) El array original es: ' + arrayMeses7);
+    console.log('3.g) El array original es: ' + arrayMeses7);
 
     var mesesMayNov = arrayMeses7.slice(4,11);
 
@@ -274,24 +298,55 @@ Listado de ejercicios:
     el mensaje “Greater than 0,5” y sino un alerta con el mensaje 
     “Lower than 0,5”*/
 
+    var num = Math.random();
+
+    if (num >= 0.5) {
+        console.log('4.a) Greater than 0,5');
+        console.log('(el número es: ' + num + ')');
+    } 
+    else {
+        console.log('4.a) Lower than 0,5');
+        console.log('(el número es: ' + num + ')');
+    }
+
+
+
 /*  b) Crear una variable “Age” que contenga un número entero entre 0 y 100 y 
     muestre los siguientes mensajes de alerta:
-        i) “Bebe” si la edad es menor a 2 años*/
+        i) “Bebe” si la edad es menor a 2 años
+            ii) “Nino” si la edad es entre 2 y 12 años
+            iii) “Adolecente” si la edad es entre 13 y 19 años
+            iv) “Joven” si la edad está entre 20 y 30 años
+            v) “Adulto” entre 31 y 60 años
+            vi) “Adulto mayor” entre 61 y 75 años
+            vii) “Anciano” si es mayor a 75 años*/
 
-/*      ii) “Nino” si la edad es entre 2 y 12 años*/
+            
+        var Age = Math.trunc( (Math.random() * 100) );
 
-/*      iii) “Adolecente” si la edad es entre 13 y 19 años*/
-
-/*      iv) “Joven” si la edad está entre 20 y 30 años*/
-
-/*      v) “Adulto” entre 31 y 60 años*/
-
-/*      vi) “Adulto mayor” entre 61 y 75 años*/
-
-/*      vii) “Anciano” si es mayor a 75 años*/
-
-
-
+        if (Age < 2) {
+            console.log('4.b) La edad ' + Age + ' años corresponde a: Bebe');
+        } 
+        else if (Age <= 12) {
+            console.log('4.b) La edad ' + Age + ' años corresponde a: Nino');
+        }
+        else if (Age <= 19) {
+            console.log('4.b) La edad ' + Age + ' años corresponde a: Adolecente');
+        }
+        else if (Age <= 30) {
+            console.log('4.b) La edad ' + Age + ' años corresponde a: Joven');
+        }
+        else if (Age <= 60) {
+            console.log('4.b) La edad ' + Age + ' años corresponde a: Adulto');
+        }
+        else if (Age <= 75) {
+            console.log('4.b) La edad ' + Age + ' años corresponde a: Adulto mayor');
+        }
+        else {
+            console.log('4.b) La edad ' + Age + ' años corresponde a: Anciano');
+        }
+    
+    
 /*
 >>>>>>>>>>>>>>>>>>>>>>  EJERCICIO 5  <<<<<<<<<<<<<<<<<<<<<<<<<
 5) For
@@ -299,8 +354,31 @@ Listado de ejercicios:
     un bucle for de JavaScript para mostrar una alerta utilizando cada una de 
     las palabras.*/
 
+    var animals = ["pigs", "goats", "sheep", "cows", "chickens"];
+    
+    console.log('los elementos del array son: ' + animals);
+    
+    //Para poder ver estos alertas, hay que abrir la pagina index.html
+    //y en la vista consola se observaran las salidas de consola 
+    for (var i = 0; i < 5; i++) {
+        var mensaje = 'El animal en el orden ' + i + ' es: ' + animals[i];
+        window.alert(mensaje);
+    }
+
 /*  b) Al array anterior convertir la primera letra de cada palabra en mayúscula 
     y mostrar una alerta por cada palabra modificada.*/
+
+    var arrayMeses7 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
+    "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
+    "Diciembre"];
+
+    console.log('3.g) El array original es: ' + arrayMeses7);
+
+    var mesesMayNov = arrayMeses7.slice(4,11);
+
+    console.log('El array mesesMayNov contiene: ' + mesesMayNov);
+       
+
 
 /*    c) Crear una variable llamada “sentence” que tenga un string vacío, luego 
     al array del punto a) recorrerlo con un bucle for para ir guardando cada 
