@@ -286,10 +286,6 @@ Listado de ejercicios:
 
 
 
-
-
-
-
 /*
 >>>>>>>>>>>>>>>>>>>>>>  EJERCICIO 4  <<<<<<<<<<<<<<<<<<<<<<<<<
 4) If Else
@@ -368,15 +364,6 @@ Listado de ejercicios:
 /*  b) Al array anterior convertir la primera letra de cada palabra en mayúscula 
     y mostrar una alerta por cada palabra modificada.*/
 
-    var arrayMeses7 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
-    "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
-    "Diciembre"];
-
-    console.log('3.g) El array original es: ' + arrayMeses7);
-
-    var mesesMayNov = arrayMeses7.slice(4,11);
-
-    console.log('El array mesesMayNov contiene: ' + mesesMayNov);
        
 
 
