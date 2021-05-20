@@ -191,7 +191,8 @@ Listado de ejercicios:
     "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", 
     "Diciembre"];
     
-    console.log('3.a) El mes 5 es: ' + arrayMeses1[4] + ' , el mes 11 es: ' + arrayMeses1[10]);
+    console.log('3.a) El mes 5 es: ' + arrayMeses1[4] + ' , el mes 11 es: ' 
+    + arrayMeses1[10]);
 
 
 
@@ -427,19 +428,260 @@ Listado de ejercicios:
     resultado. Ejecutar la función y guardar el resultado en una variable, mostrando
     el valor de dicha variable en la consola del navegador.*/
 
+    function suma( a, b) {
+        return a + b ;
+    }
+
+    var num1 = 11;
+    var num2 = 35;
+
+    var resultado = suma( num1, num2);
+
+    console.log('6.a) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
+    + resultado);
+    
+
+    
 /*  b) A la función suma anterior, agregarle una validación para controlar si alguno
     de los parámetros no es un número, mostrar una alerta aclarando que uno de los 
     parámetros tiene error y retornar el valor NaN como resultado.*/
 
+    function suma( a, b) {
+        if ( isNaN(a) || isNaN(b) ) {
+
+            //Uno de los valores no es un número y no se pueden sumar
+            //Creo el mensaje y muestro el alerta
+            var mensaje = '6.b) Uno de los valores ingresados para sumar, ' + a + 
+            ' y ' + b + ', no es un número, y por ello no se puede calcular la suma';
+            window.alert(mensaje);
+            
+            //Retorna el valor NaN
+            return 'NaN';
+        }
+        else {
+
+            //Los dos valores son números y se pueden sumar
+            return a + b ;
+        }
+    }
+
+
+    //Conjunto de valores de prueba 1
+    var num1 = 211;
+    var num2 = 135;
+
+    var resultado = suma( num1, num2);
+
+    console.log('6.b) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
+    + resultado);
+
+
+    //Conjunto de valores de prueba 2
+    var num1 = 211;
+    var num2 = "3xyz";
+
+    var resultado = suma( num1, num2);
+
+    console.log('6.b) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
+    + resultado);
+
+
+
 /*  c) Crear una función validate integer que reciba un número como parámetro y 
     devuelva verdadero si es un número entero.*/
+
+    function validate_integer (a) {
+        if ( Math.trunc(a) === a ) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+
+    //Valor de prueba 1
+    var num = 2.35;
+
+    console.log('6.c) El numero ' + num + ' es entero? ' + validate_integer(num));
+
+    
+    //Valor de prueba 2
+    var num = 48;
+
+    console.log('6.c) El numero ' + num + ' es entero? ' + validate_integer(num));
+
+    
 
 /*  d) A la función suma del ejercicio 6b) agregarle una llamada que valide que los 
     números sean enteros. En caso que haya decimales mostrar un alerta con el error 
     y retorna el número convertido a entero (redondeado).*/
 
+    //La funcion verifica que el numero no es un entero
+    function validate_nointeger (n) {
+        if ( Math.trunc(n) != n ) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+
+    function suma( a, b) {
+        if ( isNaN(a) || isNaN(b) ) {
+
+            //Uno de los valores no es un número y no se pueden sumar
+            //Creo el mensaje y muestro el alerta
+            var mensaje = '6.d) Uno de los valores ingresados para sumar, ' + a + 
+            ' y ' + b + ', no es un número, y por ello no se puede calcular la suma';
+            window.alert(mensaje);
+            
+            //Retorna el valor NaN
+            return 'NaN';
+        }
+        else {
+
+            //Los dos valores son números y se pueden sumar
+
+            //Verifico si el primer valor no es un entero
+            if (validate_nointeger (a)) {
+                
+                //Creo el mensaje y muestro el alerta
+                var mensaje = '6.d) el primer numero, ' + a + 
+                ' , no es un número entero, para el calculo se lo redondeará a ' 
+                + Math.trunc(a);
+                window.alert(mensaje);
+                
+                //Valoriza a entero
+                a = Math.trunc(a);
+            }
+
+            //Verifico si el segundo valor no es un entero
+            if (validate_nointeger (b)) {
+                
+                //Creo el mensaje y muestro el alerta
+                var mensaje = '6.d) el primer numero, ' + b + 
+                ' , no es un número entero, para el calculo se lo redondeará a ' 
+                + Math.trunc(b);
+                window.alert(mensaje);
+                
+                //Valoriza a entero
+                b = Math.trunc(b);
+            }     
+
+            return numa + numb;
+        }
+    }
+
+
+    //Conjunto de valores de prueba 1
+    var num1 = 38;
+    var num2 = 57;
+
+    var resultado = suma( num1, num2);
+
+    if (resultado === "NaN") {
+        console.log('6.d) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
+        + resultado);
+    }
+    else {
+        console.log('6.d) El resultado de sumar ' + Math.trunc(num1) + ' y ' 
+        + Math.trunc(num2) + ' es: ' + resultado);
+    }
+
+
+    //Conjunto de valores de prueba 2
+    var num1 = 38.9;
+    var num2 = 57.42938762;
+
+    var resultado = suma( num1, num2);
+
+    if (resultado === "NaN") {
+        console.log('6.d) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
+        + resultado);
+    }
+    else {
+        console.log('6.d) El resultado de sumar ' + Math.trunc(num1) + ' y ' 
+        + Math.trunc(num2) + ' es: ' + resultado);
+    }
+
+
+    //Conjunto de valores de prueba 3
+    var num1 = 211;
+    var num2 = "3xyz";
+
+    var resultado = suma( num1, num2);
+
+    if (resultado === "NaN") {
+        console.log('6.d) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
+        + resultado);
+    }
+    else {
+        console.log('6.d) El resultado de sumar ' + Math.trunc(num1) + ' y ' 
+        + Math.trunc(num2) + ' es: ' + resultado);
+    }
+
+
+
+
 /*  e) Convertir la validación del ejercicio 6b) en una función separada y llamarla 
     dentro de la función suma probando que todo siga funcionando igual.*/
+    
+    //Defino la funcion que verifica si es un numero
+    function noNum ( n, m ) {
+        if ( isNaN(n) || isNaN(m) ) {
+
+            //Uno de los valores no es un número y no se pueden sumar
+            //Creo el mensaje y muestro el alerta
+            var mensaje = '6.e) Uno de los valores ingresados para sumar, ' + n + 
+            ' y ' + m + ', no es un número, y por ello no se puede calcular la suma';
+            window.alert(mensaje);
+
+            return true;
+        }
+        else {
+
+            //Los dos valores son números y se pueden sumar
+            return false;
+        }
+
+    }
+
+    function suma( a, b) {
+        if ( noNum ( a, b ) ) {
+            
+            //Uno de los valores no es un número y no se pueden sumar
+            //Retorna el valor NaN
+            return 'NaN';
+        }
+        else {
+
+            //Los dos valores son números y se pueden sumar
+            return a + b ;
+        }
+    }
+
+
+    //Conjunto de valores de prueba 1
+    var num1 = 211;
+    var num2 = 135;
+
+    var resultado = suma( num1, num2);
+
+    console.log('6.e) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
+    + resultado);
+
+
+    //Conjunto de valores de prueba 2
+    var num1 = 211;
+    var num2 = "3xyz";
+
+    var resultado = suma( num1, num2);
+
+    console.log('6.e) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
+    + resultado);
+
 
 
     
