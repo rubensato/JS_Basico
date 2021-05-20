@@ -520,11 +520,9 @@ Listado de ejercicios:
     //La funcion verifica que el numero no es un entero
     function validate_nointeger (n) {
         if ( Math.trunc(n) != n ) {
-            window.alert(n + ", NO ES ENTERO");
             return true;
         }
         else {
-            window.alert(n + ", ES ENTERO");
             return false;
         }
     }
@@ -536,7 +534,7 @@ Listado de ejercicios:
             //Uno de los valores no es un número y no se pueden sumar
             //Creo el mensaje y muestro el alerta
             var mensaje = '6.d) Uno de los valores ingresados para sumar, ' + a + 
-            ' y ' + b + ', no es un número, y por ello no se puede calcular la suma XXXXXXX';
+            ' y ' + b + ', no es un número, y por ello no se puede calcular la suma';
             window.alert(mensaje);
             
             //Retorna el valor NaN
