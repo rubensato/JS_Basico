@@ -446,7 +446,7 @@ Listado de ejercicios:
     de los parámetros no es un número, mostrar una alerta aclarando que uno de los 
     parámetros tiene error y retornar el valor NaN como resultado.*/
 
-    function suma( a, b) {
+    function suma2( a, b) {
         if ( isNaN(a) || isNaN(b) ) {
 
             //Uno de los valores no es un número y no se pueden sumar
@@ -470,7 +470,7 @@ Listado de ejercicios:
     var num1 = 211;
     var num2 = 135;
 
-    var resultado = suma( num1, num2);
+    var resultado = suma2( num1, num2);
 
     console.log('6.b) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
     + resultado);
@@ -480,7 +480,7 @@ Listado de ejercicios:
     var num1 = 211;
     var num2 = "3xyz";
 
-    var resultado = suma( num1, num2);
+    var resultado = suma2( num1, num2);
 
     console.log('6.b) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
     + resultado);
@@ -520,21 +520,23 @@ Listado de ejercicios:
     //La funcion verifica que el numero no es un entero
     function validate_nointeger (n) {
         if ( Math.trunc(n) != n ) {
+            window.alert(n + ", NO ES ENTERO");
             return true;
         }
         else {
+            window.alert(n + ", ES ENTERO");
             return false;
         }
     }
 
 
-    function suma( a, b) {
+    function suma3( a, b) {
         if ( isNaN(a) || isNaN(b) ) {
 
             //Uno de los valores no es un número y no se pueden sumar
             //Creo el mensaje y muestro el alerta
             var mensaje = '6.d) Uno de los valores ingresados para sumar, ' + a + 
-            ' y ' + b + ', no es un número, y por ello no se puede calcular la suma';
+            ' y ' + b + ', no es un número, y por ello no se puede calcular la suma XXXXXXX';
             window.alert(mensaje);
             
             //Retorna el valor NaN
@@ -545,7 +547,7 @@ Listado de ejercicios:
             //Los dos valores son números y se pueden sumar
 
             //Verifico si el primer valor no es un entero
-            if (validate_nointeger (a)) {
+            if (validate_nointeger(a)) {
                 
                 //Creo el mensaje y muestro el alerta
                 var mensaje = '6.d) el primer numero, ' + a + 
@@ -558,7 +560,7 @@ Listado de ejercicios:
             }
 
             //Verifico si el segundo valor no es un entero
-            if (validate_nointeger (b)) {
+            if (validate_nointeger(b)) {
                 
                 //Creo el mensaje y muestro el alerta
                 var mensaje = '6.d) el primer numero, ' + b + 
@@ -570,7 +572,7 @@ Listado de ejercicios:
                 b = Math.trunc(b);
             }     
 
-            return numa + numb;
+            return a + b;
         }
     }
 
@@ -579,7 +581,7 @@ Listado de ejercicios:
     var num1 = 38;
     var num2 = 57;
 
-    var resultado = suma( num1, num2);
+    var resultado = suma3( num1, num2);
 
     if (resultado === "NaN") {
         console.log('6.d) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
@@ -595,7 +597,7 @@ Listado de ejercicios:
     var num1 = 38.9;
     var num2 = 57.42938762;
 
-    var resultado = suma( num1, num2);
+    var resultado = suma3( num1, num2);
 
     if (resultado === "NaN") {
         console.log('6.d) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
@@ -611,7 +613,7 @@ Listado de ejercicios:
     var num1 = 211;
     var num2 = "3xyz";
 
-    var resultado = suma( num1, num2);
+    var resultado = suma3( num1, num2);
 
     if (resultado === "NaN") {
         console.log('6.d) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
@@ -648,7 +650,7 @@ Listado de ejercicios:
 
     }
 
-    function suma( a, b) {
+    function suma4( a, b) {
         if ( noNum ( a, b ) ) {
             
             //Uno de los valores no es un número y no se pueden sumar
@@ -667,7 +669,7 @@ Listado de ejercicios:
     var num1 = 211;
     var num2 = 135;
 
-    var resultado = suma( num1, num2);
+    var resultado = suma4( num1, num2);
 
     console.log('6.e) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
     + resultado);
@@ -677,7 +679,7 @@ Listado de ejercicios:
     var num1 = 211;
     var num2 = "3xyz";
 
-    var resultado = suma( num1, num2);
+    var resultado = suma4( num1, num2);
 
     console.log('6.e) El resultado de sumar ' + num1 + ' y ' + num2 + ' es: ' 
     + resultado);
