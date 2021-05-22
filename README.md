@@ -24,6 +24,13 @@ Agregar el enunciado de cada ejercicio como comentario en la solución del mismo
 (El archivo PDF original con todas las consignas se encuentra en el repositorio)
 
 ---
+
+Link en Github Pages:
+
+https://rubensato.github.io/JS_Basico/
+
+---
+
 ## Licencia y Copyright
 
 © Ruben Sato - Año 2021
